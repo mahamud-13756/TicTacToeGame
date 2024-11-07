@@ -1,0 +1,119 @@
+*.iml
+.gradle
+/local.properties
+/.idea/caches
+/.idea/libraries
+/.idea/modules.xml
+/.idea/workspace.xml
+/.idea/navEditor.xml
+/.idea/assetWizardSettings.xml
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+.cxx
+local.properties
+
+# Built application files
+*.apk
+*.ap_
+*.aab
+
+# Files for the ART/Dalvik VM
+*.dex
+
+# Java class files
+*.class
+
+# Generated files
+bin/
+gen/
+out/
+
+# Gradle files
+.gradle/
+build/
+
+# Local configuration file (sdk path, etc)
+local.properties
+
+# Log files
+*.log
+
+# Android Studio specific files
+/.idea
+*.iml
+.idea/caches
+.idea/libraries
+.idea/modules.xml
+.idea/workspace.xml
+.idea/navEditor.xml
+.idea/assetWizardSettings.xml
+
+# Keystore files
+*.jks
+*.keystore
+
+# IntelliJ
+*.ipr
+*.iws
+*.iml
+.idea/
+
+# User-specific files
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/dictionaries
+.idea/**/dataSources/
+.idea/**/dataSources.ids
+.idea/**/dataSources.local.xml
+.idea/**/sqlDataSources.xml
+.idea/**/dynamic.xml
+.idea/**/uiDesigner.xml
+
+# Mac OS
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# Node.js files
+node_modules/
+
+# ProGuard folder generated at build time
+proguard/
+
+# Log, project, or misc files
+*.log
+*.temp
+*.tmp
+*.bak
+*.swp
+*~.nib
+*.orig
+*.rej
+*.sublime-workspace
+
+# Android files
+app/build/
+
+# Firebase crashlytics
+crashlytics-build.properties
+
+# Google Services (Firebase) file
+google-services.json
+
+# Gradle Wrapper
+.gradle/
+**/gradle/wrapper/gradle-wrapper.properties
+**/gradlew
+**/gradlew.bat
+
+# Android Profiling
+captures/
+
+# Others
+**/fastlane/report.xml
+**/fastlane/Preview.html
+**/fastlane/screenshots
+
