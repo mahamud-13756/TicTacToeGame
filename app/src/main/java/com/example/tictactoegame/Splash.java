@@ -26,7 +26,7 @@ public class Splash extends AppCompatActivity {
         // Listener for when the video completes
         videoView.setOnCompletionListener(mp -> {
             // After the video ends, move to MainActivity
-            startActivity(new Intent(Splash.this, MainActivity.class));
+            startActivity(new Intent(Splash.this, MainActivity2.class));
             finish();
         });
     }
