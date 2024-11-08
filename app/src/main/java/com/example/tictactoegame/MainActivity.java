@@ -9,7 +9,7 @@ import java.util.HashMap;
 
 public class MainActivity extends AppCompatActivity {
 
-    private HashMap<Integer, Boolean> buttonClickStatus;
+    private HashMap<Integer, Integer> buttonClickStatus;
     private int cnt = 0;
 
     @Override
@@ -19,35 +19,36 @@ public class MainActivity extends AppCompatActivity {
 
         // Initialize the HashMap for button click status
         buttonClickStatus = new HashMap<>();
-        buttonClickStatus.put(R.id.b1, false);
-        buttonClickStatus.put(R.id.b2, false);
-        buttonClickStatus.put(R.id.b3, false);
-        buttonClickStatus.put(R.id.b4, false);
-        buttonClickStatus.put(R.id.b5, false);
-        buttonClickStatus.put(R.id.b6, false);
-        buttonClickStatus.put(R.id.b7, false);
-        buttonClickStatus.put(R.id.b8, false);
-        buttonClickStatus.put(R.id.b9, false);
+        buttonClickStatus.put(R.id.b1, 0);
+        buttonClickStatus.put(R.id.b2, 0);
+        buttonClickStatus.put(R.id.b3, 0);
+        buttonClickStatus.put(R.id.b4, 0);
+        buttonClickStatus.put(R.id.b5, 0);
+        buttonClickStatus.put(R.id.b6, 0);
+        buttonClickStatus.put(R.id.b7, 0);
+        buttonClickStatus.put(R.id.b8, 0);
+        buttonClickStatus.put(R.id.b9, 0);
     }
 
     // Method to handle button clicks
     public void onButtonClick(View view) {
-        int buttonId = view.getId(); // Get clicked button ID
+        int buttonId = view.getId();
 
+        int click = buttonClickStatus.get(buttonId);
         // Check if the button is clicked for the first time
-        if (!buttonClickStatus.get(buttonId)) {
+        if (click == 0) {
             cnt++;
-            ImageView clickedImage = findViewById(buttonId); // Change Button to ImageView
-            buttonClickStatus.put(buttonId, true);
+            ImageView clickedImage = findViewById(buttonId);
+            buttonClickStatus.put(buttonId, cnt);
 
             // Set image based on counter
-            if (cnt % 2 == 0) {
-                clickedImage.setBackgroundResource(R.drawable.cro); // Use cross image
-            } else {
-                clickedImage.setBackgroundResource(R.drawable.ze); // Use zero image
-            }
+            if (cnt % 2 == 0) clickedImage.setBackgroundResource(R.drawable.cro);
+            else clickedImage.setBackgroundResource(R.drawable.ze);
+
+
+
+
         } else {
-            // Show "Invalid click" message for second click
             Toast.makeText(this, "Invalid click", Toast.LENGTH_SHORT).show();
         }
     }
