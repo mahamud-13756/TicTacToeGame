@@ -39,13 +39,13 @@ public class MainActivity extends AppCompatActivity {
         if (click == 0) {
             cnt++;
             ImageView clickedImage = findViewById(buttonId);
-            buttonClickStatus.put(buttonId, cnt);
+            buttonClickStatus.put(buttonId, 101);
 
             // Set image based on counter
             if (cnt % 2 == 0) clickedImage.setBackgroundResource(R.drawable.cro);
             else clickedImage.setBackgroundResource(R.drawable.ze);
 
-
+           
 
 
         } else {
