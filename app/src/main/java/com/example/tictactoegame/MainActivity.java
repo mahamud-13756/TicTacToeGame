@@ -1,10 +1,13 @@
 package com.example.tictactoegame;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.app.Dialog;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 import java.util.HashMap;
 
@@ -120,17 +123,55 @@ public class MainActivity extends AppCompatActivity {
 
     private void showWinnerToast(int winner) {
         if (winner == 100) {
-            Toast.makeText(this, "CROSS wins!", Toast.LENGTH_SHORT).show();
+            //Toast.makeText(this, "CROSS wins!", Toast.LENGTH_SHORT).show();
+            WinnerDialog(winner);
             resetGame();
         } else if (winner == 101) {
-            Toast.makeText(this, "ZERO wins!", Toast.LENGTH_SHORT).show();
+            //Toast.makeText(this, "ZERO wins!", Toast.LENGTH_SHORT).show();
+            WinnerDialog(winner);
             resetGame();
         }
         else {
-            Toast.makeText(this, "DRAW", Toast.LENGTH_SHORT).show();
+            //Toast.makeText(this, "DRAW", Toast.LENGTH_SHORT).show();
+            WinnerDialog(105);
             resetGame();
         }
     }
+
+
+    private void WinnerDialog(int winner) {
+        // Create a custom dialog
+        Dialog dialog = new Dialog(this);
+        dialog.setContentView(R.layout.dialog_winner); // Use your custom layout
+
+        // Find views from the dialog
+        TextView winnerMessage = dialog.findViewById(R.id.winnerMessage);
+        Button restartButton = dialog.findViewById(R.id.restartButton);
+
+        // Set the dialog title/message based on the winner
+        if (winner == 100) {
+            winnerMessage.setText("CROSS Wins!");
+        } else if (winner == 101) {
+            winnerMessage.setText("ZERO Wins!");
+        } else {
+            winnerMessage.setText("It's a DRAW!");
+        }
+
+        // Restart button click listener
+        restartButton.setOnClickListener(v -> {
+            dialog.dismiss(); // Close the dialog
+            resetGame();      // Reset the game
+        });
+
+        // Make the dialog background styled
+        if (dialog.getWindow() != null) {
+            dialog.getWindow().setBackgroundDrawableResource(android.R.color.transparent);
+        }
+
+        // Show the dialog
+        dialog.show();
+    }
+
 
 
 
@@ -162,6 +203,9 @@ public class MainActivity extends AppCompatActivity {
         // Reset counter
         cnt = 0;
     }
+
+
+
 
 
 }
