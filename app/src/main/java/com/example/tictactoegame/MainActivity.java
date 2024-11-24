@@ -89,27 +89,27 @@ public class MainActivity extends AppCompatActivity {
             Integer bb9 = buttonClickStatus.get(R.id.b9);
 
             // Row-wise checks
-            if (bb1 != null && bb2 != null && bb3 != null && bb1.equals(bb2) && bb2.equals(bb3) && bb1 != 0) {
+            if (bb1 != null && bb1.equals(bb2) && bb2.equals(bb3) && bb1 != 0) {
                 showWinnerToast(bb1);
-            } else if (bb4 != null && bb5 != null && bb6 != null && bb4.equals(bb5) && bb5.equals(bb6) && bb4 != 0) {
+            } else if (bb4 != null && bb4.equals(bb5) && bb5.equals(bb6) && bb4 != 0) {
                 showWinnerToast(bb4);
-            } else if (bb7 != null && bb8 != null && bb9 != null && bb7.equals(bb8) && bb8.equals(bb9) && bb7 != 0) {
+            } else if (bb7 != null && bb7.equals(bb8) && bb8.equals(bb9) && bb7 != 0) {
                 showWinnerToast(bb7);
             }
 
             // Column-wise checks
-            else if (bb1 != null && bb4 != null && bb7 != null && bb1.equals(bb4) && bb4.equals(bb7) && bb1 != 0) {
+            else if (bb1 != null && bb1.equals(bb4) && bb4.equals(bb7) && bb1 != 0) {
                 showWinnerToast(bb1);
-            } else if (bb2 != null && bb5 != null && bb8 != null && bb2.equals(bb5) && bb5.equals(bb8) && bb2 != 0) {
+            } else if (bb2 != null  && bb2.equals(bb5) && bb5.equals(bb8) && bb2 != 0) {
                 showWinnerToast(bb2);
-            } else if (bb3 != null && bb6 != null && bb9 != null && bb3.equals(bb6) && bb6.equals(bb9) && bb3 != 0) {
+            } else if (bb3 != null && bb3.equals(bb6) && bb6.equals(bb9) && bb3 != 0) {
                 showWinnerToast(bb3);
             }
 
             // Diagonal checks
-            else if (bb1 != null && bb5 != null && bb9 != null && bb1.equals(bb5) && bb5.equals(bb9) && bb1 != 0) {
+            else if (bb1 != null && bb1.equals(bb5) && bb5.equals(bb9) && bb1 != 0) {
                 showWinnerToast(bb1);
-            } else if (bb3 != null && bb5 != null && bb7 != null && bb3.equals(bb5) && bb5.equals(bb7) && bb3 != 0) {
+            } else if (bb3 != null && bb3.equals(bb5) && bb5.equals(bb7) && bb3 != 0) {
                 showWinnerToast(bb3);
             }
 
