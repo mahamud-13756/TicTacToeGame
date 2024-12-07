@@ -130,6 +130,7 @@ public class MainActivity extends AppCompatActivity {
         Dialog dialog = new Dialog(this);
         dialog.setContentView(R.layout.dialog_winner); // Use your custom layout
 
+        // just connect with Dialog XML
         TextView winnerMessage = dialog.findViewById(R.id.winnerMessage);
         Button restartButton = dialog.findViewById(R.id.restartButton);
 
